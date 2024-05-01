@@ -392,36 +392,192 @@ for (let i = 0; i <= 10; i++) {
 }
 console.log(str3);
 // *
-// **
-// ***
-// ****
-// *****
-// ******
-// *******
-// ********
-// *********
-// **********
+// * *
+// * * *
+// * * * *
+// * * * * *
+// * * * * * *
+// * * * * * * *
+// * * * * * * * *
+// * * * * * * * * *
+// * * * * * * * * * *
 /////////////////////////////////////////////////////////////////////////////////////////////////
 var str2 = "";
 
 for (let i = 0; i <= 10; i++) {
   //nested for loop
   for (let j = 1; j <= i; j++) {
-    str2 = str2 + j +' ';
+    str2 = str2 + j + " ";
   }
   str2 = str2 + "\n";
 }
 console.log(str2);
 
 // 1
-// 12
-// 123
-// 1234
-// 12345
-// 123456
-// 1234567
-// 12345678
-// 123456789
-// 12345678910
+// 1 2
+// 1 2 3
+// 1 2 3 4
+// 1 2 3 4 5
+// 1 2 3 4 5 6
+// 1 2 3 4 5 6 7
+// 1 2 3 4 5 6 7 8
+// 1 2 3 4 5 6 7 8 9
+// 1 2 3 4 5 6 7 8 9 10
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
+var str4 = "";
+
+for (let i = 0; i <= 10; i++) {
+  //nested for loop
+  for (let j = 1; j <= 10 - i; j++) {
+    str4 = str4 + j + " ";
+  }
+  str4 = str4 + "\n";
+}
+console.log(str4);
+
+// 1 2 3 4 5 6 7 8 9 10
+// 1 2 3 4 5 6 7 8 9
+// 1 2 3 4 5 6 7 8
+// 1 2 3 4 5 6 7
+// 1 2 3 4 5 6
+// 1 2 3 4 5
+// 1 2 3 4
+// 1 2 3
+// 1 2
+// 1
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+var str7 = "";
+for (let i = 0; i <= 10; i++) {
+  //nested for loop
+  for (let k = 0; k <= 10 - i; k++) {
+    str7 = str7 + " ";
+  }
+  for (let j = 0; j <= i; j++) {
+    str7 = str7 + "* ";
+  }
+  str7 = str7 + "\n";
+}
+console.log(str7);
+
+//           *
+//          * *
+//         * * *
+//        * * * *
+//       * * * * *
+//      * * * * * *
+//     * * * * * * *
+//    * * * * * * * *
+//   * * * * * * * * *
+//  * * * * * * * * * *
+// * * * * * * * * * * *
+
+var str5 = "";
+
+for (let i = 0; i <= 10; i++) {
+  //nested for loop
+  for (let j = 1; j <= 10 - i; j++) {
+    str5 = str5 + "* ";
+  }
+  str5 = str5 + "\n";
+}
+console.log(str5);
+
+// * * * * * * * * * *
+// * * * * * * * * *
+// * * * * * * * *
+// * * * * * * *
+// * * * * * *
+// * * * * *
+// * * * *
+// * * *
+// * *
+// *
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+{
+  console.log("\n\n\n");
+
+  //functions
+
+  //(named functions)
+  //function definition
+  function printhello() {
+    console.log("hello");
+  }
+
+  //function call
+  printhello();
+  let value = printhello();
+  console.log("value : ", value);
+
+  //function with return
+  function sum() {
+    let a = 10;
+    let b = 20;
+    let sum = a + b;
+
+    return sum;
+  }
+
+  let result = sum();
+  console.log("result : ", result);
+
+  //function with parameter
+  function add(a, b) {
+    let sum = a + b;
+    return sum;
+  }
+
+  let result1 = add(50, 150); //passing arguments
+  console.log("result1 : ", result1);
+
+  //anonymous functions
+  let hai = function () {
+    console.log("hai");
+    return 1000;
+  };
+
+  let hairesult = hai();
+  console.log("function hai returns : ", hairesult);
+
+  //arrow function
+  let printwelcome = () => {
+    console.log("welcome !");
+  };
+
+  printwelcome();
+
+  //callback function
+  function printhaiworld(callback) {
+    callback();
+  }
+
+  printhaiworld(function () {
+    console.log("hai world !");
+  });
+
+  let a = 10;
+
+  //call by value
+  function update(a) {
+    a = 100;
+    console.log("value of a inside function : ", a);
+  }
+
+  update(a);
+  console.log("a : ", a);
+
+  let arr = [10, 20, 30];
+
+  //call by reference
+  function updatearr(arr) {
+    arr[0] = 100;
+    console.log("arr from inside the function :", arr);
+    console.log("value of arr[0] inside function: ", arr[0]);
+  }
+
+  updatearr(arr);
+  console.log("arr : ", arr);
+}
