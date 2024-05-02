@@ -581,3 +581,104 @@ console.log(str5);
   updatearr(arr);
   console.log("arr : ", arr);
 }
+
+{
+  //closure (a function along with its environment)
+  function outerfunction() {
+    const outervariable = " from outer function";
+
+    function innerfunction() {
+      function innerfunction1() {
+        console.log("outervariable : ", outervariable);
+      }
+
+      return innerfunction1;
+    }
+
+    return innerfunction;
+  }
+
+  // let innfun = function innerfunction(){
+  //    console.log("outervariable : ",outervariable);
+  // }
+
+  let result = outerfunction();
+  console.log("result : ", result);
+  // console.log("innfun : ",innfun);
+
+  let result1 = result();
+  console.log("result : ", result1);
+
+  result1();
+
+  // result();
+  // result1();
+}
+
+{
+  //Dom Methods
+  let password = document.getElementById("password");
+  console.log("password : ", password);
+
+  let passwordvalue = password.textContent;
+  console.log("passwordvalue : ", passwordvalue);
+
+  let mycars = document.getElementsByClassName("car");
+  console.log("mycars : ", mycars);
+
+  console.log("car1 : ", mycars[0]);
+  console.log("car2 : ", mycars[1]);
+
+  let heading = document.getElementsByTagName("h1");
+  console.log("heading : ", heading);
+
+  console.log("heading1 : ", heading[0]);
+  console.log("heading2 : ", heading[1]);
+
+  let box2row1 = document.querySelector(".container #box-1 .row");
+  console.log("box2row1 : ", box2row1);
+
+  let box2rows = document.querySelectorAll(".container #box-1 .row");
+  console.log("box2rows : ", box2rows);
+  console.log("box2row2 : ", box2rows[1]);
+}
+
+{
+  //dom methods
+  let btn = document.getElementById("btn");
+
+  btn.addEventListener("click", () => {
+    //alert("button clicked....");
+    console.log("button clicked");
+  });
+
+  btn.addEventListener("mouseover", () => {
+    console.log("mouseover event fired...");
+  });
+
+  btn.addEventListener("mouseout", () => {
+    console.log("mouseout event fired...");
+  });
+
+  btn.addEventListener("mousedown", () => {
+    console.log("mousedown event fired...");
+  });
+
+  btn.addEventListener("mouseup", () => {
+    console.log("mouseup event fired...");
+  });
+
+  btn.addEventListener("mousemove", () => {
+    console.log("mousemove event fired...");
+  });
+
+  let inp = document.getElementById("name");
+
+  inp.addEventListener("keydown", () => {
+    console.log("keydown event fired...");
+  });
+
+  inp.addEventListener("keyup", () => {
+    console.log("keyup event fired...");
+  });
+}
