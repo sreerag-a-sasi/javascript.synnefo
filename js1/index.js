@@ -681,4 +681,21 @@ console.log(str5);
   inp.addEventListener("keyup", () => {
     console.log("keyup event fired...");
   });
+
+  //math functions
+
+  console.log(Math.sqrt(16)); //4
+  console.log(Math.round(10.4)); //10
+  console.log(Math.round(10.5)); //11
+  console.log(Math.ceil(10.1)); //11
+  console.log(Math.ceil(10.9)); //11
+  console.log(Math.floor(10.1)); //10
+  console.log(Math.floor(10.9)); //10
+  console.log(Math.abs(-1)); //1
+  console.log(Math.abs(+1)); //1
+  console.log(Math.PI); //3.1415926...
+  console.log(Math.max(10, 20)); //20
+  console.log(Math.min(10, 20)); //10
+  console.log(Math.pow(2, 3)); //(2^3)=8
+  
 }
