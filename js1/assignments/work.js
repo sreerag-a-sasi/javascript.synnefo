@@ -134,10 +134,7 @@ console.log("json_obj :", json_obj);
 //   console.log(`the number is zero!!!`);
 // }
 
-
-
 //checking whether the day is weekend or weekday
-
 
 // let day = Number(prompt("Enter the number:"));
 // console.log(`You entered: ${day}`);
@@ -167,3 +164,44 @@ console.log("json_obj :", json_obj);
 //   default:
 //     console.log("you have entered the wrong number");
 // }
+
+// Create an array of car objects
+const cars = [
+  {
+    make: "Toyota",
+    model: "Corolla",
+    year: 1985,
+  },
+  {
+    make: "Ford",
+    model: "Mustang",
+    year: 2022,
+  },
+  {
+    make: "Chevrolet",
+    model: "Impala",
+    year: 1978,
+  },
+  {
+    make: "Honda",
+    model: "Civic",
+    year: 2005,
+  },
+];
+
+// Function to check if the car is a classic
+function checkCarType(carObj) {
+  // const currentYear = new Date().getFullYear();
+  if (carObj.year < 1990) {
+    return "Classic car";
+  } else {
+    return "Modern car";
+  }
+}
+
+// Log the car details and classification
+cars.forEach((car) => {
+  console.log(
+    `The ${car.make} ${car.model} (${car.year}) is a ${checkCarType(car)}.`
+  );
+});

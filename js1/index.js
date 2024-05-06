@@ -699,3 +699,5 @@ console.log(str5);
   console.log(Math.pow(2, 3)); //(2^3)=8
   
 }
+
+
