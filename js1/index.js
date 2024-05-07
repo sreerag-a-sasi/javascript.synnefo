@@ -697,7 +697,156 @@ console.log(str5);
   console.log(Math.max(10, 20)); //20
   console.log(Math.min(10, 20)); //10
   console.log(Math.pow(2, 3)); //(2^3)=8
-  
+}
+
+// {
+//   //timer funtion
+//   setTimeout( function () {
+//     console.log("from setTimeout...");
+//   },5000);
+
+//   setInterval( function (){
+//     console.log("from setInterval...");
+//   },2000)
+// }
+
+{
+  //spread operator
+  let arr = [1, 2, 3];
+  console.log("arr : ", arr);
+
+  let arr1 = [...arr, 4];
+  console.log("arr1 : ", arr1);
+
+  let obj = {
+    name: "john doe",
+    place: "new york",
+  };
+  console.log("obj : ", obj);
+
+  let obj1 = { ...obj, age: 15 };
+  console.log("obj1 : ", obj1);
+
+  //deconstructing
+  let [num1, num2, num3] = arr;
+  console.log("num1 : ", num1);
+  console.log("num2 : ", num2);
+  console.log("num3 : ", num3);
+
+  let { name, place } = obj;
+  console.log("name : ", name);
+  console.log("place : ", place);
+}
+
+{
+  //nested deconstructing
+  let matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+  ];
+
+  console.log("matrix : ", matrix);
+
+  let [firstrow, secondrow, thirdrow] = matrix;
+
+  let [a, b, c] = firstrow;
+  let [d, e, f] = secondrow;
+  let [g, h, i] = thirdrow;
+
+  console.log("a : ", a);
+  console.log("b : ", b);
+  console.log("c : ", c);
+  console.log("d : ", d);
+  console.log("e : ", e);
+  console.log("f : ", f);
+  console.log("g : ", g);
+  console.log("h : ", h);
+  console.log("i : ", i);
+
+  let person = {
+    name: "jane doe",
+    place: "australia",
+    age: "22",
+    address: {
+      city: "mycity",
+      zipcode: "123456",
+    },
+  };
+
+  console.log("person : ", person);
+
+  let {
+    name,
+    place,
+    age,
+    address: { city, zipcode },
+  } = person;
+
+  console.log("name : ", name);
+  console.log("place : ", place);
+  console.log("age : ", age);
+  console.log("city :", city);
+  console.log("zipcode : ", zipcode);
+}
+
+{
+  let i = 0;
+
+  //recursive function
+  function count() {
+    i++;
+    while (i <= 10) {
+      console.log(i);
+      count(); //recursive funtion call
+    }
+  }
+
+  count(); //normal function call
+}
+
+{
+  let i = 10;
+
+  //recursive function
+  function count() {
+    i--;
+    while (i >= 0) {
+      console.log(i);
+      count(); //recursive funtion call
+    }
+  }
+
+  count(); //normal function call
 }
 
 
+//fibonacci series .....
+
+function generateFibonacciRecursive(n) {
+  if (n <= 1) {
+      return [0, 1].slice(0, n + 1);
+  }
+  const series = generateFibonacciRecursive(n - 1);
+  series.push(series[n - 1] + series[n - 2]);
+  return series;
+}
+
+var n = 10; // Change this to the desired number of terms
+const fibonacciRecursive = generateFibonacciRecursive(n);
+console.log(`Fibonacci series (recursive): ${fibonacciRecursive.join(', ')}`);
+
+
+
+function generateFibonacciIterative(n) {
+  const fibonacciSeries = [0, 1];
+  for (let i = 2; i < n; i++) {
+      const nextNumber = fibonacciSeries[i - 1] + fibonacciSeries[i - 2];
+      fibonacciSeries.push(nextNumber);
+  }
+  return fibonacciSeries;
+}
+
+var n = 20; // Change this to the desired number of terms
+const fibonacciIterative = generateFibonacciIterative(n);
+console.log(`Fibonacci series (iterative): ${fibonacciIterative.join(', ')}`);
