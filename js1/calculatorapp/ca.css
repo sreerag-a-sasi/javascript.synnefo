@@ -1,18 +1,50 @@
+*{
+  margin: 0%;
+  padding: 20px;
+  align-content: center;
+}
 body {
-  background-color: black;
+  background-color: rgb(114, 98, 98);
+  margin: 0%;
+  padding: 0%;
+}
+.cal{
+  position: relative;
+  background-color: #2196f3;
+  width: 33vw;
+  height: auto;
+  margin: 0%;
+  padding: 0%;
+}
+.display{
+  background-color: rgb(255, 255, 255);
+  color: black;
+  text-align: end;
+  height: 10vh;
+  align-content: center;
+  position: relative;
+  padding: 5px 50px;
 }
 .grid-container {
+  position: relative;
   display: grid;
   grid-template-columns: auto auto auto auto;
   gap: 10px;
   background-color: #2196f3;
-  padding: 10px;
+  padding: 25px;
   width: 30vw;
+  
 }
 
 .grid-container > div {
+  position: relative;
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid black;
   text-align: center;
   font-size: 30px;
+  height: 70px;
+  text-align: center;
+  align-content: center;
+  border-radius: 9px;
+  font-weight: 600;
 }
