@@ -820,33 +820,96 @@ console.log(str5);
   count(); //normal function call
 }
 
-
 //fibonacci series .....
 
-function generateFibonacciRecursive(n) {
-  if (n <= 1) {
-      return [0, 1].slice(0, n + 1);
-  }
-  const series = generateFibonacciRecursive(n - 1);
-  series.push(series[n - 1] + series[n - 2]);
-  return series;
+// function generateFibonacciRecursive(n) {
+//   if (n <= 1) {
+//       return [0, 1].slice(0, n + 1);
+//   }
+//   const series = generateFibonacciRecursive(n - 1);
+//   series.push(series[n - 1] + series[n - 2]);
+//   return series;
+// }
+
+// var n = 10; // Change this to the desired number of terms
+// const fibonacciRecursive = generateFibonacciRecursive(n);
+// console.log(`Fibonacci series (recursive): ${fibonacciRecursive.join(', ')}`);
+
+// function generateFibonacciIterative(n) {
+//   const fibonacciSeries = [0, 1];
+//   for (let i = 2; i < n; i++) {
+//       const nextNumber = fibonacciSeries[i - 1] + fibonacciSeries[i - 2];
+//       fibonacciSeries.push(nextNumber);
+//   }
+//   return fibonacciSeries;
+// }
+
+// var n = 20; // Change this to the desired number of terms
+// const fibonacciIterative = generateFibonacciIterative(n);
+// console.log(`Fibonacci series (iterative): ${fibonacciIterative.join(', ')}`);
+
+//fibonacci series own code
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+{
+  let arr = [1, 2, 3, 4, 5];
+
+  let students = [
+    {
+      name: "amal",
+      place: "malappuram",
+      mark: 49,
+    },
+    {
+      name: "anil",
+      place: "ernakulam",
+      mark: 50,
+    },
+    {
+      name: "avin",
+      place: "alappuzha",
+      mark: 48,
+    },
+    {
+      name: "avin",
+      place: "kollam",
+      mark: 39,
+    },
+  ];
+
+  //array methods
+
+  //foreach returns nothing
+  arr.forEach((element, index) => {
+    console.log(element);
+  });
+
+  //find
+  const findStudent = students.find((item) => {
+    return item.name === "avin";
+  });
+
+  console.log("findStudent : ", findStudent);
+
+  //filter
+  const filterStudents = students.filter(function (item, index) {
+    return item.name === "avin";
+  });
+
+  console.log("filterStudents : ", filterStudents);
+
+  //map
+  const mappedStudents = students.map((element) => {
+    return element.name;
+  });
+
+  console.log("mappedStudents : ", mappedStudents);
+
+  //reduce
+  const value = students.reduce((total, item) => {
+    return total + item.mark;
+  }, 0);
+
+  console.log("value : ", value);
 }
-
-var n = 10; // Change this to the desired number of terms
-const fibonacciRecursive = generateFibonacciRecursive(n);
-console.log(`Fibonacci series (recursive): ${fibonacciRecursive.join(', ')}`);
-
-
-
-function generateFibonacciIterative(n) {
-  const fibonacciSeries = [0, 1];
-  for (let i = 2; i < n; i++) {
-      const nextNumber = fibonacciSeries[i - 1] + fibonacciSeries[i - 2];
-      fibonacciSeries.push(nextNumber);
-  }
-  return fibonacciSeries;
-}
-
-var n = 20; // Change this to the desired number of terms
-const fibonacciIterative = generateFibonacciIterative(n);
-console.log(`Fibonacci series (iterative): ${fibonacciIterative.join(', ')}`);
