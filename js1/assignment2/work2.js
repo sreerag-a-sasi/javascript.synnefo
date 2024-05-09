@@ -134,7 +134,19 @@ console.log("End of the code");
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //time date print
+const currentdate = new Date().getDate();
+const currentmonth = new Date().getMonth();
+const currentyear = new Date().getFullYear();
+const currenttimeh = new Date().getHours();
+const currenttimem = new Date().getMinutes();
 
+console.log(
+  `date ${currentdate}-${
+    currentmonth + 1
+  }-${currentyear}   time :${currenttimeh}:${currenttimem}`
+);
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //digital clock
 //calculator
