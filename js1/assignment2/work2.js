@@ -137,14 +137,19 @@ console.log("End of the code");
 const currentdate = new Date().getDate();
 const currentmonth = new Date().getMonth();
 const currentyear = new Date().getFullYear();
-const currenttimeh = new Date().getHours();
+var currenttimeh = new Date().getHours();
 const currenttimem = new Date().getMinutes();
+if(currenttimeh>12){
+  currenttimeh= currenttimeh-12;
+}
 
 console.log(
   `date ${currentdate}-${
-    currentmonth + 1
+    currentmonth +1
   }-${currentyear}   time :${currenttimeh}:${currenttimem}`
 );
+const current = new Date();
+console.log(current)
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
