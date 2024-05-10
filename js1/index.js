@@ -913,3 +913,35 @@ console.log(str5);
 
   console.log("value : ", value);
 }
+
+{
+  console.log("this : ", this);
+
+  let obj = {
+    name: "john",
+    age: 17,
+    getAge: function () {
+      console.log(`age is ${this.age}`);
+    },
+  };
+
+  obj.getAge();
+
+  function greet(message, message1) {
+    console.log("message : ", message);
+    console.log("message1 : ", message1);
+
+    console.log("this : ", this);
+    console.log("name : ", this.name);
+  }
+
+  // greet("hello","hai");
+
+  // greet.call(obj, "hello","hai");
+
+  // let bindedfunction = greet.bind(obj, "hello","hai");
+  // console.log("bindedfunction : ",bindedfunction);
+  // bindedfunction();
+
+  greet.apply(obj, ["hello", "hai"]);
+}
