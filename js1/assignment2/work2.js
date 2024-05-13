@@ -161,13 +161,13 @@ console.log(current);
 //digital clock
 
 // Get the clock element
-const clockElement = document.getElementById('clock');
+const clockElement = document.getElementById("clock");
 
 // Function to update the clock
 const updateClock = () => {
-    const currentDate = new Date();
-    const timeString = currentDate.toLocaleTimeString();
-    clockElement.innerHTML = timeString;
+  const currentDate = new Date();
+  const timeString = currentDate.toLocaleTimeString();
+  clockElement.innerHTML = timeString;
 };
 
 // Call the updateClock function every second (1000 milliseconds)
