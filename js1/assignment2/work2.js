@@ -138,23 +138,41 @@ const currentdate = new Date().getDate();
 const currentmonth = new Date().getMonth();
 const currentyear = new Date().getFullYear();
 var currenttimeh = new Date().getHours();
-const currenttimem = new Date().getMinutes();
-if(currenttimeh>12){
-  currenttimeh= currenttimeh-12;
+var currenttimem = new Date().getMinutes();
+var currenttimes = new Date().getSeconds();
+if (currenttimeh > 12) {
+  currenttimeh = currenttimeh - 12;
 }
 
 console.log(
   `date ${currentdate}-${
-    currentmonth +1
-  }-${currentyear}   time :${currenttimeh}:${currenttimem}`
+    currentmonth + 1
+  }-${currentyear}   time :${currenttimeh}:${currenttimem}:${currenttimes}`
 );
-const current = new Date();
-console.log(current)
+setInterval(new Date().getHours(), 1000);
+setInterval(new Date().getMinutes(), 1000);
+setInterval(new Date().getSeconds(), 1000);
 
-
+var current = new Date();
+console.log(current);
+// setInterval(new Date().getTime, 1000);
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //digital clock
+
+// Get the clock element
+const clockElement = document.getElementById('clock');
+
+// Function to update the clock
+const updateClock = () => {
+    const currentDate = new Date();
+    const timeString = currentDate.toLocaleTimeString();
+    clockElement.innerHTML = timeString;
+};
+
+// Call the updateClock function every second (1000 milliseconds)
+setInterval(updateClock, 1000);
+
 //calculator
 //assignment link 1
 // array elements sum
