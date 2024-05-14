@@ -77,3 +77,25 @@ console.log("person2 : ", person2);
 
 console.log("name : ", person2.name);
 person2.greeting();
+
+
+
+class Animal {
+    name;
+
+    constructor(name){
+        this.name = name;
+    }
+
+    walk() {
+        console.log(`Animal ${this.name} is walking...`);
+    }
+}
+
+let myAnimal1 = new Animal("johny");
+console.log("myAnimal1 : ", myAnimal1);
+console.log("Animal name : ", myAnimal1.name);
+myAnimal1.walk();
+
+
+
