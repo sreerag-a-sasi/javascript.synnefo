@@ -173,8 +173,10 @@ const updateClock = () => {
 // Call the updateClock function every second (1000 milliseconds)
 setInterval(updateClock, 1000);
 
-//calculator
-//assignment link 1
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//calculator -ok
+//assignment link 1 -ok
 // array elements sum
 // average of an array element
 //minimum and  maximum value in an array
