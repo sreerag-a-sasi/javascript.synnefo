@@ -78,18 +78,16 @@ console.log("person2 : ", person2);
 console.log("name : ", person2.name);
 person2.greeting();
 
-
-
 class Animal {
-    name;
+  name;
 
-    constructor(name){
-        this.name = name;
-    }
+  constructor(name) {
+    this.name = name;
+  }
 
-    walk() {
-        console.log(`Animal ${this.name} is walking...`);
-    }
+  walk() {
+    console.log(`Animal ${this.name} is walking...`);
+  }
 }
 
 let myAnimal1 = new Animal("johny");
@@ -97,30 +95,56 @@ console.log("myAnimal1 : ", myAnimal1);
 console.log("Animal name : ", myAnimal1.name);
 myAnimal1.walk();
 
-
-
 //inheritance
 class Cat extends Animal {
-    color;
+  color;
 
-    constructor(name,color) {
-        super(name); //calls parents constructor
-        this.color = color;
-    }
+  constructor(name, color) {
+    super(name); //calls parents constructor
+    this.color = color;
+  }
 
-    run() {
-        console.log(`cat ${this.name} is running `);
-    }
+  run() {
+    console.log(`cat ${this.name} is running `);
+  }
 
-    //method overriding
-    walk() {
-        console.log(` ${this.color} Animal ${this.name} is walking... `);
-    }
+  //method overriding
+  walk() {
+    console.log(` ${this.color} Animal ${this.name} is walking... `);
+  }
 }
 
 let myCat = new Cat("tom", "blue");
-console.log("myCat : ",myCat);
+console.log("myCat : ", myCat);
 console.log(" Cat name : ", myCat.name);
-console.log("cat color : ",myCat.color);
+console.log("cat color : ", myCat.color);
 myCat.walk();
 myCat.run();
+
+//setters and getters
+class Car {
+  name;
+  color;
+
+  constructor(name) {
+    this.name = name;
+  }
+
+  set setcolor(color) {
+    this.color = color;
+  }
+
+  get getcolor() {
+    return this.color;
+  }
+}
+
+let myCar = new Car("BMW");
+console.log("car : ", myCar.name);
+
+//myCar.setcolor("Green"); //without using setter
+myCar.color = "Green"; //using setter
+
+//let carColor = myCar.getColor(); //without using getter
+let carColor = myCar.color; //using getter
+console.log("carColor : ", carColor);
