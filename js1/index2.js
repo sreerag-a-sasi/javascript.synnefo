@@ -99,3 +99,28 @@ myAnimal1.walk();
 
 
 
+//inheritance
+class Cat extends Animal {
+    color;
+
+    constructor(name,color) {
+        super(name); //calls parents constructor
+        this.color = color;
+    }
+
+    run() {
+        console.log(`cat ${this.name} is running `);
+    }
+
+    //method overriding
+    walk() {
+        console.log(` ${this.color} Animal ${this.name} is walking... `);
+    }
+}
+
+let myCat = new Cat("tom", "blue");
+console.log("myCat : ",myCat);
+console.log(" Cat name : ", myCat.name);
+console.log("cat color : ",myCat.color);
+myCat.walk();
+myCat.run();
