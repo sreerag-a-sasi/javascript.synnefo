@@ -148,3 +148,7 @@ myCar.color = "Green"; //using setter
 //let carColor = myCar.getColor(); //without using getter
 let carColor = myCar.color; //using getter
 console.log("carColor : ", carColor);
+
+
+
+
