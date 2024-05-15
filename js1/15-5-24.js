@@ -123,6 +123,24 @@ class Paragraph {
     return this.paragraph.style.border;
   }
 
+
+  set margin(margin) {
+    this.paragraph.style.margin = margin + "px";
+  }
+
+  get margin() {
+    return this.paragraph.style.margin;
+  }
+
+
+  set lineHeight(lineHeight) {
+    this.paragraph.style.lineHeight = lineHeight + "rem";
+  }
+
+  get lineHeight() {
+    return this.paragraph.style.lineHeight;
+  }
+
   onClick(fn) {
     this.paragraph.onclick = fn;
   }
@@ -152,6 +170,14 @@ console.log("fontsize : ", p.fontSize);
 
 p.border = "";
 console.log("Border : ", p.border);
+
+
+p.margin = "20";
+console.log("margin : ", p.margin);
+
+
+p.lineHeight = "2";
+console.log("lineheight : ", p.lineHeight);
 
 p.onClick(function () {
   console.log("button clicked...");
