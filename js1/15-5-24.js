@@ -150,7 +150,6 @@ console.log("padding : ", p.padding);
 p.fontSize = 20;
 console.log("fontsize : ", p.fontSize);
 
-
 p.border = "";
 console.log("Border : ", p.border);
 
