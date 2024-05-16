@@ -7,12 +7,14 @@ button {
   border: 0cap;
   border: solid rgb(0, 255, 242) 3px;
 }
-table, th, td{
+table,
+th,
+td {
   border: 2px solid black;
   border-collapse: collapse;
   padding: 8px;
 }
 
-#send{
+#send {
   margin: 10px;
 }
