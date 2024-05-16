@@ -14,4 +14,4 @@ console.log("fourth line");
 // third line
 // because whenever javascript see's a asynchronous operation it will automatically stacked in a queue
 
-//Asynchronous opretaions can be time out functions event listner functions and etc..
+// Asynchronous opretaions can be time out functions event listner functions and etc..
