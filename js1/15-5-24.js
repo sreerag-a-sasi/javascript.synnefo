@@ -123,7 +123,6 @@ class Paragraph {
     return this.paragraph.style.border;
   }
 
-
   set margin(margin) {
     this.paragraph.style.margin = margin + "px";
   }
@@ -131,7 +130,6 @@ class Paragraph {
   get margin() {
     return this.paragraph.style.margin;
   }
-
 
   set lineHeight(lineHeight) {
     this.paragraph.style.lineHeight = lineHeight + "rem";
@@ -171,10 +169,8 @@ console.log("fontsize : ", p.fontSize);
 p.border = "";
 console.log("Border : ", p.border);
 
-
 p.margin = "20";
 console.log("margin : ", p.margin);
-
 
 p.lineHeight = "2";
 console.log("lineheight : ", p.lineHeight);
