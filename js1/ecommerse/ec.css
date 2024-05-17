@@ -1,0 +1,57 @@
+.container{
+    /* background-color: rgb(111, 109, 109); */
+    width: 100%;
+    height: 100vh;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+    background-color: bisque;
+    padding: 0 30px;
+}
+.brand{
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family: "Raleway",sans-serif;
+}
+.links , a{
+    text-align: center;
+    align-content: center;
+    font-size: 23px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.815);
+    padding: 0 15px;
+    font-weight: 300;
+    font-family: "Open sans",sans-serif;
+}
+.search,i{
+    align-content: center;
+    padding: 0 10px;
+}
+i{
+    width: 24px;
+    height: 24px;
+    opacity: 0.5;
+}
+.search i:hover{
+    opacity: 1.0;
+}
+.container{
+    background-image: url(images/lake.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#photos{
+
+    width: 100%;
+    height: 70vh;
+    background-image: url(images/1.jpg);
+    /* z-index: -1;
+    opacity: 0.5; */
+    margin-top: 5%;
+}
