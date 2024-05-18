@@ -1,57 +1,111 @@
-.container{
-    /* background-color: rgb(111, 109, 109); */
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+  background-color: bisque;
+  padding: 0 30px;
+  position:sticky;
+  z-index: 100;
+}
+.brand {
+  align-items: center;
+  font-size: 23px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-family: "Raleway", sans-serif;
+}
+.links,
+a {
+  text-align: center;
+  align-content: center;
+  font-size: 23px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.815);
+  padding: 0 15px;
+  font-weight: 300;
+  font-family: "Open sans", sans-serif;
+}
+.search,
+i {
+  align-content: center;
+  padding: 0 10px;
+}
+.search > i {
+  width: 24px;
+  height: 24px;
+  opacity: 0.5;
+}
+.search i:hover {
+  opacity: 1;
+}
+.container {
+  background-image: url(images/lake.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+#photos {
+  position: relative;
+  width: 100%;
+  height: 65vh;
+  background-image: url(images/1.jpg);
+  top: 50%;
+  transform: translateY(-50%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  margin-top: -1.8em;
+}
+#photos > .part1,
+.try {
+  padding-left: 20px;
+  width: 50%;
+  color: white;
+  align-content: center;
+}
+#photos > .part1 > h4 {
+  font-size: 3em;
+}
+#photos > .part1 > h1 {
+  font-size: 4em;
+}
+#input {
+  border: 1px solid white;
+  width: 150px;
+  height: 25px;
+  border-radius: 3em;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+}
+button {
+  height: 25px;
+  width: 100px;
+  border-radius: 3em;
+  border: 1px solid white;
+  background-color: green;
+  color: beige;
+}
+.try {
+  background-image: url(images/amethyst.jpg);
+  margin: 50px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.container2{
     width: 100%;
     height: 100vh;
-}
-.nav{
-    display: flex;
-    justify-content: space-between;
-    height: 10vh;
-    background-color: bisque;
-    padding: 0 30px;
-}
-.brand{
-    justify-content: center;
-    align-items: center;
-    font-size: 23px;
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    font-family: "Raleway",sans-serif;
-}
-.links , a{
-    text-align: center;
-    align-content: center;
-    font-size: 23px;
-    text-decoration: none;
-    color: rgba(0, 0, 0, 0.815);
-    padding: 0 15px;
-    font-weight: 300;
-    font-family: "Open sans",sans-serif;
-}
-.search,i{
-    align-content: center;
-    padding: 0 10px;
-}
-i{
-    width: 24px;
-    height: 24px;
-    opacity: 0.5;
-}
-.search i:hover{
-    opacity: 1.0;
-}
-.container{
-    background-image: url(images/lake.jpg);
-    background-size: cover;
-    background-position: center;
-}
-
-#photos{
-
-    width: 100%;
-    height: 70vh;
-    background-image: url(images/1.jpg);
-    /* z-index: -1;
-    opacity: 0.5; */
-    margin-top: 5%;
+    position: relative;
+    background-color: aqua;
 }
