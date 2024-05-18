@@ -123,6 +123,9 @@ button {
   gap: 10px;
   background-color: #2196F3;
   padding: 10px; */
+  display: flex;
+  flex-wrap: wrap;
+  overflow-wrap: break-word;
 }
 
 #card:hover {
