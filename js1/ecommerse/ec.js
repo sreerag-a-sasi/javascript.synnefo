@@ -56,12 +56,13 @@ xhr.onreadystatechange = function () {
       for (let i = 0; i < parsed_response.length; i++) {
         card =
         card +
-          ` <myImage>${parsed_response[i].image}</myImage>
+          `<card>
+           <myImage>${parsed_response[i].image}</myImage>
             <h4>${parsed_response[i].title}</h4>
             <h4>${parsed_response[i].price}</h4>
             <h4>${parsed_response[i].id}</h4>
             <h4>${parsed_response[i].rating.rate}</h4>
-            `;
+            <card/>`;
       }
 
       content.innerHTML = card;
