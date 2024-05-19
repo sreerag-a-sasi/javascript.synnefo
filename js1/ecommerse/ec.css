@@ -40,12 +40,12 @@ i {
   align-content: center;
   padding: 0 10px;
 }
-.search > i {
+.search > i > img {
   width: 24px;
   height: 24px;
   opacity: 0.5;
 }
-.search i:hover {
+.search i > img:hover {
   opacity: 1;
 }
 .container {
@@ -104,36 +104,59 @@ button {
 }
 
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
-.container2 {
+#container2 {
   width: 100%;
   height: 100vh;
   position: relative;
+}
+#send {
+  height: 25px;
+  width: 150px;
+  border-radius: 3em;
+  border: 1px solid white;
+  background-color: rgb(23, 72, 209);
+  color: beige;
+  margin-top: 10px;
+  margin-left: 50%;
+  transform: translateX(-50%);
 }
 
 #card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  width: 50%;
+  width: 25%;
   border-radius: 5px;
   margin: 30px;
-  background-color: rgba(0, 0, 0, 0.332);
   color: white;
-  /* display:grid;
-  grid-template-rows: auto auto auto auto auto auto;
-  gap: 10px;
-  background-color: #2196F3;
-  padding: 10px; */
-  display: flex;
-  flex-wrap: wrap;
+  background-color: DodgerBlue;
+  padding: 10px;
   overflow-wrap: break-word;
+  /* display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: space-evenly; */
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap to the next line */
+  justify-content: center; /* Center cards horizontally */
+  gap: 20px; /* Add spacing between cards */
 }
 
 #card:hover {
   box-shadow: 0 16px 20px 16px rgba(0, 0, 0, 0.474);
 }
-
+/* #container2>#card>img{
+  width: 120px;
+  height: 150px;
+  object-fit: cover;
+} */
 img {
-  border-radius: 5px 5px 0 0;
+  border-radius: 5px;
+  width: 20vw;
+  height: 15vh;
+  height: fit-content;
+  object-fit: contain;
+  overflow-clip-margin: content-box;
+  overflow: hidden;
+  padding-left: 20px;
 }
 
 #details {
