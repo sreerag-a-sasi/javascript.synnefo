@@ -9,13 +9,6 @@
   height: 100vh;
 }
 
-.card {
-  border: 2px solid blue;
-  border-radius: 8px;
-  display: grid;
-  grid-template-columns: auto auto auto;
-  overflow-wrap: break-word;
-}
 
 .nav {
   display: flex;
@@ -117,7 +110,6 @@ button {
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 #container2 {
   width: 100%;
-  height: 200vh;
   position: relative;
   /* background-color: black; */
   padding-bottom: 50px;
@@ -134,11 +126,18 @@ button {
   transform: translateX(-50%);
 }
 
+.card {
+  border: 2px solid rgb(71, 241, 65);
+  border-radius: 8px;
+  display: grid;
+  gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+  
+}
 /* .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  width: 25%;
-
   border-radius: 5px;
   border: 3px solid blue;
   margin: 30px;
@@ -146,25 +145,10 @@ button {
   background-color: DodgerBlue;
   padding: 10px;
   overflow-wrap: break-word;
-  /* display: flex;
-  gap: 20px; */
-/* Allow cards to wrap to the next line
-  /* justify-content: center; Center cards horizontally */
-
-/* .card:hover {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+} */
+.card:hover {
   box-shadow: 0 16px 20px 16px rgba(0, 0, 0, 0.474);
-} */
-/* img {
-  border-radius: 5px;
-  background-color: white;
-  width: 20vw;
-  height: 40vh;
-  object-fit:contain;
-  padding-left: 20px;
-  margin-left: 50%;
-  transform: translateX(-50%);
-} */
-
-#details {
-  padding: 2px 16px;
 }

@@ -26,7 +26,7 @@
 
 let xhr = new XMLHttpRequest();
 
-xhr.open("get", "https://fakestoreapi.com/products?limit=10");
+xhr.open("get", "https://fakestoreapi.com/products?limit=20");
 
 let btn = document.getElementById("send");
 
@@ -57,7 +57,7 @@ xhr.onreadystatechange = function () {
         card =
           card +
           `<div class="card">
-            <img src="${parsed_response[i].image}" width="30px" height="30px">
+            <img src="${parsed_response[i].image}" width="20vw" height="40vh">
             <h4>${parsed_response[i].id}</h4>
             <h4>${parsed_response[i].title}</h4>
             <h4>${parsed_response[i].price}</h4>
