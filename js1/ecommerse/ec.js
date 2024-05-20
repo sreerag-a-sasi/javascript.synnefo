@@ -36,7 +36,7 @@ btn.addEventListener("click", function () {
 
 console.log("xhr : ", xhr);
 
-let content = document.getElementById("card");
+let content = document.getElementById("container3");
 
 xhr.onreadystatechange = function () {
   console.log("readystate : ", xhr.readyState);
@@ -55,14 +55,15 @@ xhr.onreadystatechange = function () {
 
       for (let i = 0; i < parsed_response.length; i++) {
         card =
-        card +
-          `<card>
-            <img src="${parsed_response[i].image}">
+          card +
+          `<div class="card">
+            <img src="${parsed_response[i].image}" width="30px" height="30px">
+            <h4>${parsed_response[i].id}</h4>
             <h4>${parsed_response[i].title}</h4>
             <h4>${parsed_response[i].price}</h4>
-            <h4>${parsed_response[i].id}</h4>
             <h4>${parsed_response[i].rating.rate}</h4>
-            <card/>`;
+            <p>${parsed_response[i].description}</p>
+            <div/>`;
       }
 
       content.innerHTML = card;
