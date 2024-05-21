@@ -9,7 +9,6 @@
   height: 100vh;
 }
 
-
 .nav {
   display: flex;
   justify-content: space-between;
@@ -18,6 +17,11 @@
   padding: 0 30px;
   position: sticky;
   z-index: 100;
+}
+.nav>.brand:hover{
+  color: rgb(255, 0, 0);
+  transition: 0.3s;
+  font-size: 24px;
 }
 .brand {
   align-items: center;
@@ -110,8 +114,9 @@ button {
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 #container2 {
   width: 100%;
+  height: auto;
   position: relative;
-  /* background-color: black; */
+  background-color: rgb(141, 138, 138);
   padding-bottom: 50px;
 }
 #send {
@@ -127,14 +132,44 @@ button {
 }
 
 .card {
-  border: 2px solid rgb(71, 241, 65);
+  border: 2px solid rgb(255, 255, 255);
   border-radius: 8px;
-  display: grid;
   gap: 10px;
-  background-color: #2196F3;
+  background-color: #000000;
+  color: white;
   padding: 10px;
-  
+  overflow-wrap: break-word;
 }
+.card > img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 10px;
+  background-color: white;
+  display: block;
+  margin: 0 auto;
+}
+#container3 {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 20px;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.card:hover {
+  box-shadow: 0 16px 20px 16px rgba(0, 0, 0, 0.474);
+  transition: 0.3s;
+}
+
+
+
+
+
+
+
+
+
 /* .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
@@ -145,10 +180,8 @@ button {
   background-color: DodgerBlue;
   padding: 10px;
   overflow-wrap: break-word;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
   gap: 20px;
   justify-content: center;
 } */
-.card:hover {
-  box-shadow: 0 16px 20px 16px rgba(0, 0, 0, 0.474);
-}
