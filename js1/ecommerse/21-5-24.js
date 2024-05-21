@@ -18,11 +18,9 @@ xhr.onload = function () {
       card +
       `<div class="card">
             <img src="${parsed_response[i].image}" >
-            <h4>${parsed_response[i].id}</h4>
             <h4>${parsed_response[i].title}</h4>
-            <h4>${parsed_response[i].price}</h4>
-            <h4>${parsed_response[i].rating.rate}</h4>
-            <p>${parsed_response[i].description}</p>
+            <h4>price : ${parsed_response[i].price}</h4>
+            <h4>rating : ${parsed_response[i].rating.rate}</h4>
             </div>`;
   }
 
