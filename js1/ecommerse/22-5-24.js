@@ -1,4 +1,4 @@
-fetch("https://fakestoreapi.com/products?limit=10")
+fetch("https://fakestoreapi.com/products?limit=18")
   .then( async (res) => {
     console.log(res);
     let response= await res.json();
