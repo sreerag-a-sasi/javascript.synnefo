@@ -1,0 +1,82 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+.usernav{
+    display: flex;
+    padding: 0 10vw;
+    padding-top: 5vh;
+    font-size: 0.8rem;
+    background-color: black;
+    color: white;
+    height: 8vh;
+    text-decoration: underline;
+}
+.usernav>div{
+    width: 25vw;
+    justify-content: space-around;
+}
+.usernav>.op{
+    text-align: center;
+}
+.user-data{
+    display: flex;
+    padding: 5px;
+    font-size: small;
+    background-color: black;
+}
+.user-data>div{
+    border: 1px solid rgb(108, 104, 104);
+}
+.profile{
+    padding-left: 8px;
+    display: flex;
+    text-align: left;
+    width: 25vw;
+    align-items:center;
+    background-color: gray;
+    height: 10vh;
+}
+.profile>img{
+    aspect-ratio: 1 / 1;
+    height: 10vh;
+    padding-right:5px;
+}
+.username{
+    padding-left:5px;
+    width: 25vw;
+    overflow-wrap: break-word;
+    text-wrap: wrap;
+    text-align: left;
+    background-color: rgb(68, 67, 67);
+    height: 10vh;
+}
+.email{
+    padding-left: 5px;
+    width: 25vw;
+    text-align: left;
+    display: flex;
+    overflow: auto;
+    overflow-wrap: break-word;
+    text-wrap: wrap;
+    align-items:center;
+    align-self: center;
+    background-color: gray;
+    height: 10vh;
+}
+.option{
+    padding-left: 5px;
+    padding-right: 5vw;
+    width: 25vw;
+    align-items:center;
+    justify-self: center;
+    background-color: rgb(68, 67, 67);
+    height: 10vh;
+}
+.option>img{
+    padding-top: 8px;
+    float: right;
+    padding-right: 8px;
+    aspect-ratio: 1 / 1;
+    height: 20px;
+}
