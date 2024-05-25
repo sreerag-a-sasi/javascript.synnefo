@@ -74,3 +74,20 @@ console.log("result15 : ", result15); //true
 const regexp16 = /fish.*$/i;
 const result16 = regexp16.test(str3); // here it matches fishe, fishes, fishesss, ..., since due to '*' multiple charecters are matched
 console.log("result16 : ", result16); //true
+
+
+
+
+const str5="Hello";
+
+const regexp17 =  /[kjm]/i;
+const result17 = regexp17.test(str5)// if there is a 'k' or 'j' or 'm' then it will be true
+console.log("result17 : ",result17);// false
+
+const regexp18 = /[^kjm]/i;
+const result18 = regexp18.test(str5)// if there is no 'k' or 'j' or 'm' then it will be true
+console.log("result18 : ",result18);// true
+
+const regexp19 = /[h+]/i;// atleast one 'H' is required
+const result19 = regexp19.test(str5);
+console.log("result19 : ",result19);// true 

@@ -78,18 +78,17 @@
   min-width: 187px;
 }
 .option {
+    display: inline-flex;
   padding-left: 5px;
   padding-right: 5vw;
   width: 25vw;
   align-items: center;
-  justify-self: center;
+  justify-content: space-around;
   background-color: rgb(68, 67, 67);
-  min-width: 89px;
+  /* min-width: 80px; */
 }
 .option > img {
-  padding-top: 8px;
-  float: right;
-  padding-right: 8px;
   aspect-ratio: 1 / 1;
   height: 20px;
+  padding: 0 5px;
 }
