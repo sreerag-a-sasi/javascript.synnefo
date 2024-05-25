@@ -144,3 +144,38 @@ console.log("result30 : ",result30);// false
 // so '\' (backslash) is used to escape special characters
 
 
+//Date validation
+
+//1
+const regexpForDate = /^\d{1,2}-\d{1,2}-\d{4}$/i;// string should start with 1 or 2 digits, then after '-' symbol, then again 1 or two digits, after '-',ending digits should be 4
+
+//2
+// | - indicates or case 0 | 1 means either 0 or 1 can occur
+const regexpForDate1 = /^([012]?\d|3[01])-([0]\d|[1][012])-(\d{4})$/i;// in the first group- if first character is 0 or 1 or 2 then the second character can be any digits(0-9) or if the character is '3' then the second character should be '0' or '1'
+//in the second group if the first character is '0' then second charecter can be any digits (0-9) or if first character is 1 then the second character should be 0 or 1 or 2
+//in the last group four digits is allowed
+
+function checkResult(value) {
+    const result = regexpForDate1.test(value);
+
+    if (result) {
+        return '';
+    } else {
+        return 'Inavalid String';
+    }
+}
+
+const value = "16-12-2023";
+
+let validation_result = checkResult(value);
+console.log("validation_result : ",validation_result);
+
+function onChange(arg) {
+    let validation_result = checkResult(arg.value);
+    let label = document.getElementById('error');
+    if (validation_result) {
+        label.innerHTML = validation_result;
+    } else {
+        label.innerHTML = validation_result;
+    }
+}
