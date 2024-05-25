@@ -91,3 +91,56 @@ console.log("result18 : ",result18);// true
 const regexp19 = /[h+]/i;// atleast one 'H' is required
 const result19 = regexp19.test(str5);
 console.log("result19 : ",result19);// true 
+
+const regexp20 = /O$/i;// string ends with 'O'
+const result20 = regexp20.test(str5);
+console.log("result20 : ",result20);// true
+
+const regexp21 = /O?$/i;// 'O' in string ending is optional
+const result21 = regexp21.test(str5);
+console.log("result21 : ", result21);// true
+
+const regexp22 = /O+$/i;// Atleast one 'O' is required in the string end
+const result22 = regexp22.test(str5);
+console.log("result22 : ", result22);// true
+
+//{}- indicates the number of charecters, a{2} means "aa", ie 2 a is  required
+const regexp23 = /L{2}O$/i;// 'O' should exactly after 2 L's
+const result23 = regexp23.test(str5);
+console.log("result23 : ",result23);// true
+
+const regexp24 = /L{2,4}O$/i;// 'O' should be exactly after between 2 to 4 L's
+const result24 = regexp24.test(str5);
+console.log("result24 : ", result24);// true
+
+const regexp25 = /HeL{2,4}O$/i;// 'O' should be exactly after between 2 to 4 L's and 'O' is required
+const result25 = regexp25.test(str5);
+console.log("result25 : ", result25);// true
+
+const regexp26 = /HeL{2,}O$/i;// '2' or more 'L' is required
+const result26 = regexp26.test(str5);
+console.log("result26 : ",result26);// true
+
+
+// \ - indicates escape character, used for matching any characters which has special meaning
+const regexp27 = /\d/i;// if there is any digits, it will be true, else it will be false
+const result27 = regexp27.test(str5);
+console.log("result27 : ", result27);// false
+
+const regexp28 = /\D/i;// if there is any non-digits it will be true, if there is only digits it will be false
+const result28 = regexp28.test(str5);
+console.log("result28 : ",result28);// true
+
+// suppose we want to match '.' in a string, since '.' has a special meaning in regular expressions it will not work as expected and will match evarything
+
+const regexp29 = /./i;// if there is '.' or anything will match 
+const result29 = regexp29.test(str5);
+console.log("result29 : ",result29);// true
+
+const regexp30 = /\./i;// if there is any '.' in the string it match, else it will be false
+const result30 = regexp30.test(str5);
+console.log("result30 : ",result30);// false
+
+// so '\' (backslash) is used to escape special characters
+
+
