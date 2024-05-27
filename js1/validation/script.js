@@ -75,111 +75,105 @@ const regexp16 = /fish.*$/i;
 const result16 = regexp16.test(str3); // here it matches fishe, fishes, fishesss, ..., since due to '*' multiple charecters are matched
 console.log("result16 : ", result16); //true
 
+const str5 = "Hello";
 
-
-
-const str5="Hello";
-
-const regexp17 =  /[kjm]/i;
-const result17 = regexp17.test(str5)// if there is a 'k' or 'j' or 'm' then it will be true
-console.log("result17 : ",result17);// false
+const regexp17 = /[kjm]/i;
+const result17 = regexp17.test(str5); // if there is a 'k' or 'j' or 'm' then it will be true
+console.log("result17 : ", result17); // false
 
 const regexp18 = /[^kjm]/i;
-const result18 = regexp18.test(str5)// if there is no 'k' or 'j' or 'm' then it will be true
-console.log("result18 : ",result18);// true
+const result18 = regexp18.test(str5); // if there is no 'k' or 'j' or 'm' then it will be true
+console.log("result18 : ", result18); // true
 
-const regexp19 = /[h+]/i;// atleast one 'H' is required
+const regexp19 = /[h+]/i; // atleast one 'H' is required
 const result19 = regexp19.test(str5);
-console.log("result19 : ",result19);// true 
+console.log("result19 : ", result19); // true
 
-const regexp20 = /O$/i;// string ends with 'O'
+const regexp20 = /O$/i; // string ends with 'O'
 const result20 = regexp20.test(str5);
-console.log("result20 : ",result20);// true
+console.log("result20 : ", result20); // true
 
-const regexp21 = /O?$/i;// 'O' in string ending is optional
+const regexp21 = /O?$/i; // 'O' in string ending is optional
 const result21 = regexp21.test(str5);
-console.log("result21 : ", result21);// true
+console.log("result21 : ", result21); // true
 
-const regexp22 = /O+$/i;// Atleast one 'O' is required in the string end
+const regexp22 = /O+$/i; // Atleast one 'O' is required in the string end
 const result22 = regexp22.test(str5);
-console.log("result22 : ", result22);// true
+console.log("result22 : ", result22); // true
 
 //{}- indicates the number of charecters, a{2} means "aa", ie 2 a is  required
-const regexp23 = /L{2}O$/i;// 'O' should exactly after 2 L's
+const regexp23 = /L{2}O$/i; // 'O' should exactly after 2 L's
 const result23 = regexp23.test(str5);
-console.log("result23 : ",result23);// true
+console.log("result23 : ", result23); // true
 
-const regexp24 = /L{2,4}O$/i;// 'O' should be exactly after between 2 to 4 L's
+const regexp24 = /L{2,4}O$/i; // 'O' should be exactly after between 2 to 4 L's
 const result24 = regexp24.test(str5);
-console.log("result24 : ", result24);// true
+console.log("result24 : ", result24); // true
 
-const regexp25 = /HeL{2,4}O$/i;// 'O' should be exactly after between 2 to 4 L's and 'O' is required
+const regexp25 = /HeL{2,4}O$/i; // 'O' should be exactly after between 2 to 4 L's and 'O' is required
 const result25 = regexp25.test(str5);
-console.log("result25 : ", result25);// true
+console.log("result25 : ", result25); // true
 
-const regexp26 = /HeL{2,}O$/i;// '2' or more 'L' is required
+const regexp26 = /HeL{2,}O$/i; // '2' or more 'L' is required
 const result26 = regexp26.test(str5);
-console.log("result26 : ",result26);// true
-
+console.log("result26 : ", result26); // true
 
 // \ - indicates escape character, used for matching any characters which has special meaning
-const regexp27 = /\d/i;// if there is any digits, it will be true, else it will be false
+const regexp27 = /\d/i; // if there is any digits, it will be true, else it will be false
 const result27 = regexp27.test(str5);
-console.log("result27 : ", result27);// false
+console.log("result27 : ", result27); // false
 
-const regexp28 = /\D/i;// if there is any non-digits it will be true, if there is only digits it will be false
+const regexp28 = /\D/i; // if there is any non-digits it will be true, if there is only digits it will be false
 const result28 = regexp28.test(str5);
-console.log("result28 : ",result28);// true
+console.log("result28 : ", result28); // true
 
 // suppose we want to match '.' in a string, since '.' has a special meaning in regular expressions it will not work as expected and will match evarything
 
-const regexp29 = /./i;// if there is '.' or anything will match 
+const regexp29 = /./i; // if there is '.' or anything will match
 const result29 = regexp29.test(str5);
-console.log("result29 : ",result29);// true
+console.log("result29 : ", result29); // true
 
-const regexp30 = /\./i;// if there is any '.' in the string it match, else it will be false
+const regexp30 = /\./i; // if there is any '.' in the string it match, else it will be false
 const result30 = regexp30.test(str5);
-console.log("result30 : ",result30);// false
+console.log("result30 : ", result30); // false
 
 // so '\' (backslash) is used to escape special characters
-
 
 //Date validation
 
 //1
-const regexpForDate = /^\d{1,2}-\d{1,2}-\d{4}$/i;// string should start with 1 or 2 digits, then after '-' symbol, then again 1 or two digits, after '-',ending digits should be 4
+const regexpForDate = /^\d{1,2}-\d{1,2}-\d{4}$/i; // string should start with 1 or 2 digits, then after '-' symbol, then again 1 or two digits, after '-',ending digits should be 4
 
 //2
 // | - indicates or case 0 | 1 means either 0 or 1 can occur
-const regexpForDate1 = /^([0][1-9]|[12]\d|3[01])-([0][1-9]|[1][012])-(\d{4})$/i;// in the first group- if first character is 0 or 1 or 2 then the second character can be any digits(0-9) or if the character is '3' then the second character should be '0' or '1'
+const regexpForDate1 = /^([0][1-9]|[12]\d|3[01])-([0][1-9]|[1][012])-(\d{4})$/i; // in the first group- if first character is 0 or 1 or 2 then the second character can be any digits(0-9) or if the character is '3' then the second character should be '0' or '1'
 //in the second group if the first character is '0' then second charecter can be any digits (0-9) or if first character is 1 then the second character should be 0 or 1 or 2
 //in the last group four digits is allowed
 
 function checkResult(value) {
-    const result = regexpForDate1.test(value);
+  const result = regexpForDate1.test(value);
 
-    if (result) {
-        return '';
-    } else {
-        return 'Inavalid String';
-    }
+  if (result) {
+    return "";
+  } else {
+    return "Inavalid String";
+  }
 }
 
 const value = "16-12-2023";
 
 let validation_result = checkResult(value);
-console.log("validation_result : ",validation_result);
+console.log("validation_result : ", validation_result);
 
 function onChange(arg) {
-    let validation_result = checkResult(arg.value);
-    let label = document.getElementById('error');
-    if (validation_result) {
-        label.innerHTML = validation_result;
-    } else {
-        label.innerHTML = validation_result;
-    }
+  let validation_result = checkResult(arg.value);
+  let label = document.getElementById("error");
+  if (validation_result) {
+    label.innerHTML = validation_result;
+  } else {
+    label.innerHTML = validation_result;
+  }
 }
-
 
 //'^' and '$' can only be used in the start and end of a string and cannot be used in between strings to match, so we use lookaheads for givinng starting and ending in between strings
 
@@ -189,26 +183,23 @@ function onChange(arg) {
 //(?<!) - negative lookbehind, (?<!B)A -> matches : A only if A is not proceeded by B
 
 {
+  let datestring = "19-12-2023";
 
-    let datestring = '19-12-2023'
+  let regex = /-\d+-/; // it will match also '-12-' in result and gives as result array
+  const result = datestring.match(regex);
 
-    let regex = /-\d+-/; // it will match also '-12-' in result and gives as result array
-    const result = datestring.match(regex);
+  console.log("result : ", result);
 
-    console.log("result : ", result);
+  //inorder to match exactly '12' in date string  we can use lookaheads
+  let regex1 = /(?<=-)\d+(?=-)/; // this will exactly match '12' in string
+  const result1 = datestring.match(regex1);
+  console.log("result : ", result1);
 
-    //inorder to match exactly '12' in date string  we can use lookaheads
-    let regex1 = /(?<=-)\d+(?=-)/; // this will exactly match '12' in string
-    const result1 = datestring.match(regex1);
-    console.log("result : ", result1);
+  //example for negative lookahead and negative lookbehind
+  let phone = "(91)1234567890";
 
-    //example for negative lookahead and negative lookbehind
-    let phone = "(91)1234567890";
-
-    //to match numbers outside of (91)
-    const phoneregex = /(?<!\()\d+(?!\))/;
-    const phoneregexresult = phone.match(phoneregex);
-    console.log("phoneregexresult : ",phoneregexresult);
-
-
+  //to match numbers outside of (91)
+  const phoneregex = /(?<!\()\d+(?!\))/;
+  const phoneregexresult = phone.match(phoneregex);
+  console.log("phoneregexresult : ", phoneregexresult);
 }
