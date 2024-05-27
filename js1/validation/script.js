@@ -179,3 +179,36 @@ function onChange(arg) {
         label.innerHTML = validation_result;
     }
 }
+
+
+//'^' and '$' can only be used in the start and end of a string and cannot be used in between strings to match, so we use lookaheads for givinng starting and ending in between strings
+
+//(?=) - positivelookahead, A(?=B) -> matches : A only if A is followed by B
+//(?!) - negative lookahead, A(?!B) -> matches : A only if A is not followed by B
+//(?<=) - positive lookbehind, (?<=B)A -> matches : A only if A is proceeded by B
+//(?<!) - negative lookbehind, (?<!B)A -> matches : A only if A is not proceeded by B
+
+{
+
+    let datestring = '19-12-2023'
+
+    let regex = /-\d+-/; // it will match also '-12-' in result and gives as result array
+    const result = datestring.match(regex);
+
+    console.log("result : ", result);
+
+    //inorder to match exactly '12' in date string  we can use lookaheads
+    let regex1 = /(?<=-)\d+(?=-)/; // this will exactly match '12' in string
+    const result1 = datestring.match(regex1);
+    console.log("result : ", result1);
+
+    //example for negative lookahead and negative lookbehind
+    let phone = "(91)1234567890";
+
+    //to match numbers outside of (91)
+    const phoneregex = /(?<!\()\d+(?!\))/;
+    const phoneregexresult = phone.match(phoneregex);
+    console.log("phoneregexresult : ",phoneregexresult);
+
+
+}
