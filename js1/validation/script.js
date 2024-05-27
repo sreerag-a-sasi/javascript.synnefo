@@ -151,7 +151,7 @@ const regexpForDate = /^\d{1,2}-\d{1,2}-\d{4}$/i;// string should start with 1 o
 
 //2
 // | - indicates or case 0 | 1 means either 0 or 1 can occur
-const regexpForDate1 = /^([012]?\d|[1][1-9]|3[01])-([0][1-9]|[1][012])-(\d{4})$/i;// in the first group- if first character is 0 or 1 or 2 then the second character can be any digits(0-9) or if the character is '3' then the second character should be '0' or '1'
+const regexpForDate1 = /^([012][1-9]|3[01])-([0][1-9]|[1][012])-(\d{4})$/i;// in the first group- if first character is 0 or 1 or 2 then the second character can be any digits(0-9) or if the character is '3' then the second character should be '0' or '1'
 //in the second group if the first character is '0' then second charecter can be any digits (0-9) or if first character is 1 then the second character should be 0 or 1 or 2
 //in the last group four digits is allowed
 
