@@ -29,6 +29,7 @@ document.getElementById("userDataForm").addEventListener("submit", function (eve
     event.preventDefault(); // Prevent form submission
 
     const password = document.getElementById("password").value;
+    const password1 = document.getElementById("password1").value;
     checkStrength(password);
     if (!password) {
         alert("Please enter a valid password.");
@@ -40,6 +41,12 @@ document.getElementById("userDataForm").addEventListener("submit", function (eve
             console.log("your password doesnt match, try again");
         }
     }
+    if ((password) === (password1)){
+        alert("your password has been verified");
+        return;
+    }else {
+        alert("your password doesnt match, try again");
+    };
 });
 
 //   function showAlert(){
