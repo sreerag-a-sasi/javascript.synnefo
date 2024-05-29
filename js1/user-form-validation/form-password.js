@@ -23,16 +23,24 @@ function checkStrength(pass) {
   let regex4 = /[!@#$%^&*.?]/;
   if (regex4.test(pass)) count++;
 
-  console.log(pass, "Pasword is " + strength[count]);
+  console.log("your Password is " + strength[count]);
 }
 document.getElementById("userDataForm").addEventListener("submit", function (event) {
     event.preventDefault(); // Prevent form submission
 
     const password = document.getElementById("password").value;
     checkStrength(password);
-    if ((document.getElementById("password").value) === (document.getElementById("password1").value)) {
-        console.log("your password has been confiremed");
+    if (!password) {
+        alert("Please enter a valid password.");
+        return; // Stop further processing
     }else{
-        console.log("your password doesnt match, try again");
+        if ((document.getElementById("password").value) === (document.getElementById("password1").value)) {
+            console.log("your password has been confiremed");
+        }else{
+            console.log("your password doesnt match, try again");
+        }
     }
-  });
+});
+
+//   function showAlert(){
+//     alert("your password has been confiremed.");
