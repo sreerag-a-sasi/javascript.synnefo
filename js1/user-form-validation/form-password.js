@@ -36,7 +36,7 @@ document.getElementById("userDataForm").addEventListener("submit", function (eve
         return; // Stop further processing
     }else{
         if ((document.getElementById("password").value) === (document.getElementById("password1").value)) {
-            console.log("your password has been confiremed");
+            console.log("your password has been confirmed");
         }else{
             console.log("your password doesnt match, try again");
         }
