@@ -3,8 +3,16 @@
   margin: 0%;
   box-sizing: border-box;
 }
+.bingo>img{
+  aspect-ratio: 1 / 1;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 100px;
+  border: 5px solid black;
+}
 .form {
   width: 100%;
+  min-height: 100vh;
   height: auto;
   background-color: blue;
   align-content: center;
