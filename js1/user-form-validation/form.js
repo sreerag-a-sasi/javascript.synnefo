@@ -13,7 +13,10 @@ userDataForm.addEventListener("submit", function (event) {
   if (isValidEmail(email)===true) {
     console.log("your email has been verified!");
     alert("your email has been verified!");
+    return;
   }else{
     console.log("your email is not verified!");
+    alert("your email is not verified!");
+    return;
   }
 });
